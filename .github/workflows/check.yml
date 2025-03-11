@@ -13,8 +13,8 @@ jobs:
       matrix:
         number_of_cities: [100]
         segment: [12]
-        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        data_set: [C101_1.dat, C101_1.5.dat, C201_2.5.dat, R101_1.5.dat, R101_2.5.dat, RC101_1.dat, RC101_1.5.dat, RC101_2.5.dat]
+        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10]
+        data_set: [C101_1.dat, C201_2.5.dat, RC101_1.dat, RC101_1.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -48,8 +48,8 @@ jobs:
       matrix:
         number_of_cities: [100]
         segment: [12]
-        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        data_set: [C101_1.dat, C101_1.5.dat, C201_2.5.dat, R101_1.5.dat, R101_2.5.dat, RC101_1.dat, RC101_1.5.dat, RC101_2.5.dat]
+        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10]
+        data_set: [C101_1.dat, C201_2.5.dat, RC101_1.dat, RC101_1.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -89,8 +89,8 @@ jobs:
       matrix:
         number_of_cities: [100]
         segment: [12]
-        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        data_set: [C101_1.dat, C101_1.5.dat, C201_2.5.dat, R101_1.5.dat, R101_2.5.dat, RC101_1.dat, RC101_1.5.dat, RC101_2.5.dat]
+        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10]
+        data_set: [C101_1.dat, C201_2.5.dat, RC101_1.dat, RC101_1.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -130,8 +130,8 @@ jobs:
       matrix:
         number_of_cities: [100]
         segment: [12]
-        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        data_set: [C101_1.dat, C101_1.5.dat, C201_2.5.dat, R101_1.5.dat, R101_2.5.dat, RC101_1.dat, RC101_1.5.dat, RC101_2.5.dat]
+        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10]
+        data_set: [C101_1.dat, C201_2.5.dat, RC101_1.dat, RC101_1.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -171,8 +171,8 @@ jobs:
       matrix:
         number_of_cities: [100]
         segment: [12]
-        iteration: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        data_set: [C101_1.dat, C101_1.5.dat, C201_2.5.dat, R101_1.5.dat, R101_2.5.dat, RC101_1.dat, RC101_1.5.dat, RC101_2.5.dat]
+        iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10]
+        data_set: [C101_1.dat, C201_2.5.dat, RC101_1.dat, RC101_1.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
