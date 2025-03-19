@@ -27,7 +27,7 @@ B_ratio = 0.7
 C_ratio = 0.1
 delta = 0.6
 alpha = [0.5, 0.3, 0.1]
-theta = 2
+theta = 1
 
 
 def read_data(path):
