@@ -6,13 +6,13 @@ import heapq
 import time
 import itertools
 import collections
-
-number_of_trucks = 3
+import os
+number_of_trucks = 1
 number_of_cities = 0
-number_of_drones = 3
+number_of_drones = 1
 truck_speed = 0.5
 drone_speed = 1
-drone_capacity = 4
+drone_capacity = 8
 drone_limit_time = 90
 city_demand = []
 release_date = []
@@ -26,7 +26,7 @@ A_ratio = 1
 B_ratio = 0.7
 C_ratio = 0.1
 delta = 0.6
-alpha = [0.3, 0.2, 0.1]
+alpha = [0.5, 0.3, 0.1]
 theta = 2
 
 
