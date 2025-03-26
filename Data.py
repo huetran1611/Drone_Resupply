@@ -12,7 +12,7 @@ number_of_cities = 0
 number_of_drones = 2
 truck_speed = 0.5
 drone_speed = 1
-drone_capacity = 4
+drone_capacity = 8
 drone_limit_time = 90
 city_demand = []
 release_date = []
@@ -27,7 +27,7 @@ B_ratio = 0.7
 C_ratio = 0.1
 delta = 0.3
 alpha = [0.5, 0.3, 0.1]
-theta = 0.5
+theta = 2
 
 
 def read_data(path):
