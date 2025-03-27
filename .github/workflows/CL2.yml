@@ -13,8 +13,8 @@ jobs:
       matrix:
         number_of_cities: [30]
         segment: [12]
-        iteration: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-        data_set: ["C101_0.5.dat","C101_1.dat","C101_1.5.dat", "C101_2.dat", "C101_2.5.dat", "C101_3.dat", "C201_0.5.dat", "C201_1.dat", "C201_1.5.dat", "C201_2.dat", "C201_2.5.dat", "C201_3.dat", "R101_0.5.dat", "R101_1.dat", "R101_1.5.dat", "R101_2.dat", "R101_2.5.dat", "R101_3.dat", "RC101_0.5.dat", "RC101_1.dat", "RC101_1.5.dat", "RC101_2.dat", "RC101_2.5.dat", "RC101_3.dat"]
+        iteration: [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+        data_set: ["RC101_0.5.dat", "RC101_2.dat"]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
