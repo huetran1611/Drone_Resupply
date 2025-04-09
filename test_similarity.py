@@ -76,8 +76,7 @@ def Tabu_search(init_solution, tabu_tenure, CC, first_time, Data1, index_conside
 
     # BREAKLOOP = Data.number_of_cities
 
-    # END_SEGMENT =  int(Data.number_of_cities /math.log10(Data.number_of_cities)) * theta
-    END_SEGMENT =  theta
+    END_SEGMENT =  int(Data.number_of_cities/math.log10(Data.number_of_cities)) * theta
     END = 0
     T = 0
     Best_T = 0
@@ -86,21 +85,21 @@ def Tabu_search(init_solution, tabu_tenure, CC, first_time, Data1, index_conside
     current_sol = init_solution
     data_to_write = {}
     COUNT = 0
-    while T < SEGMENT:
-        # print("+++++++++++++++", COUNT, "+++++++++++++++")
-        # if T > 3:
-        #     COUNT += 1
-        #     T = 0
-        #     current_neighborhood5, solution_pack1 = Neighborhood.swap_two_array(current_sol)
-        #     best_sol_in_brnei = current_neighborhood5[0][0]
-        #     best_fitness_in_brnei = current_neighborhood5[0][1][0]
-        #     for i in range(1, len(current_neighborhood5)):
-        #         cfnode = current_neighborhood5[i][1][0]
-        #         if cfnode - best_fitness_in_brnei < epsilon:
-        #             best_sol_in_brnei = current_neighborhood5[i][0]
-        #             best_fitness_in_brnei = cfnode
+    while COUNT < 3:
+        print("+++++++++++++++", COUNT, "+++++++++++++++")
+        if T > 3:
+            COUNT += 1
+            T = 0
+            current_neighborhood5, solution_pack1 = Neighborhood.swap_two_array(current_sol)
+            best_sol_in_brnei = current_neighborhood5[0][0]
+            best_fitness_in_brnei = current_neighborhood5[0][1][0]
+            for i in range(1, len(current_neighborhood5)):
+                cfnode = current_neighborhood5[i][1][0]
+                if cfnode - best_fitness_in_brnei < epsilon:
+                    best_sol_in_brnei = current_neighborhood5[i][0]
+                    best_fitness_in_brnei = cfnode
             
-        #     current_sol = best_sol_in_brnei
+            current_sol = best_sol_in_brnei
 
         end_time = time.time()
         if end_time - start_time > TIME_LIMIT:
@@ -357,11 +356,10 @@ def Tabu_search(init_solution, tabu_tenure, CC, first_time, Data1, index_conside
                     continue
                 else:
                     weight[j] = (1 - factor)*weight[j] + factor*score[j]/used[j]
-            # if flag == True:
-            #     i = 0
-            # else:
-            #     i += 1
-            i+=1
+            if flag == True:
+                i = 0
+            else:
+                i += 1
         print("-------",T,"--------")
         print(best_fitness)
         print(T, best_sol, "\n", best_fitness)
@@ -389,7 +387,7 @@ def Tabu_search_for_CVRP(CC):
     list_init = []
     
     start_time = time.time()
-    current_sol5 = Function.initial_solution3()
+    current_sol5 = Function.initial_solution7()
     list_init.append(current_sol5)
 
     
@@ -511,5 +509,5 @@ for txt_file in txt_files:
                 sheet.cell(row=row, column=column+1, value=str(best_csv_sol))
             sheet.cell(row=row, column=column+2, value=data_to_write["Best_T"])
             sheet.cell(row=row, column=column+3, value=data_to_write["END"])
-            workbook.save(f"Random_{number_of_cities}_{data_set}_{SEGMENT}_{theta}_{delta}_{alpha}_iter-_{ite}_CL2.xlsx")
+            workbook.save(f"Random_{number_of_cities}_{data_set}_{SEGMENT}_iter-_{ite}_CL2.xlsx")
             workbook.close()
